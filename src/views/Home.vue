@@ -9,7 +9,7 @@
     </v-form>
     <v-btn class="ma-3" @click="addPlayer(form)" color="primary">Add player</v-btn>
     <v-spacer></v-spacer>
-    <v-btn @click="getPlayers()" class="ma-3">Get Players</v-btn>
+    <v-btn @click="$router.push('game')" class="ma-3" color="green">Start Game</v-btn>
   </div>
 </template>
 
@@ -29,6 +29,7 @@ export default {
     },
     removePlayer(name) {
       this.$store.commit("removePlayer", name);
+    
     },
   },
 };
